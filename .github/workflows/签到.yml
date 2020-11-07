@@ -1,0 +1,76 @@
+name: 签到
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: 30 04,23 * * ?
+  watch:
+    types: started
+    
+jobs:
+  run-it:
+    runs-on: ubuntu-latest
+    name: 签到
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+        - name: Checkout codes
+          uses: actions/checkout@v2
+ 
+        - name: Run 号码1
+          env:
+           haoma: ${{ secrets.HAOMA }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+           
+        - name: Run 号码2
+          env:
+           haoma: ${{ secrets.HAOMA2 }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+
+        - name: Run 号码3
+          env:
+           haoma: ${{ secrets.HAOMA3 }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+           
+        - name: Run 号码4
+          env:
+           haoma: ${{ secrets.HAOMA4 }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+           
+        - name: Run 号码5
+          env:
+           haoma: ${{ secrets.HAOMA5 }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+           
+        - name: Run 号码6
+          env:
+           haoma: ${{ secrets.HAOMA6 }}
+           mm: ${{ secrets.MM }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
+           
+        - name: Run 号码7
+          env:
+           haoma: ${{ secrets.HAOMA7 }}
+           mm: ${{ secrets.MM2 }}
+           appid: ${{ secrets.APPID }}
+          run: |
+           bash CnUnicom.sh ${haoma} ${mm} ${appid}
