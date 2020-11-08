@@ -13,13 +13,13 @@ username="${haoma}"
 password="${mm}"
 
 # 联通APP版本
-unicom_version=7.0402
+unicom_version=8.0000
 
 # deviceId: 随机IMEI
 deviceId=$(shuf -i 123456789012345-987654321012345 -n 1)
 
 # 安卓手机端APP登录过的使用这个UA
-UA="Mozilla/5.0 (Linux; Android 6.0.1; oneplus a5010 Build/V417IR; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.100 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$username};devicetype{deviceBrand:Oneplus,deviceModel:oneplus a5010}"
+UA="Mozilla/5.0 (Linux; Android 9; G8142 Build/47.2.A.11.228; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.158 Mobile Safari/537.36; unicom{version:android@$unicom_version,desmobile:$username};devicetype{deviceBrand:Sony,deviceModel:G8142}"
 
 # 苹果手机端APP登录过的使用这个UA
 #UA="ChinaUnicom4.x/176 CFNetwork/1121.2.2 Darwin/19.2.0"
