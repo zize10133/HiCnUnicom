@@ -12,7 +12,7 @@ alias curl='curl -m 10'
 username="${haoma}"
 password="${mm}"
 
-# 联通APP版本
+# 联通APP版本1
 unicom_version=8.0100
 
 # deviceId: 随机IMEI
